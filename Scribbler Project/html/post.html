@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--css files-->
+        <link rel="stylesheet" type="text/css" href="post.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            .modal,.mod,.mod1,.mo{
+                display: none; 
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px; 
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%; 
+                overflow: auto; 
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4); 
+            }
+            .modal-content,.modal-con,.modal-cont,.modal-c{
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+            .close,.clo,.clos,.cl{
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .close:hover,.close:focus,.clo:hover,.clo:focus,.clos:hover,.clos:focus,.cl:hover,.cl:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            .pc{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                margin: 12px;
+                padding: 10px;
+                background-color: white;
+                color: black;
+            }
+        </style>
+        
+        
+    </head>
+<body>
+        
+        <h1 style="font-family:'Brush Script MT',cursive;color: blue;font-size:50px;">ScriBBler</h1>
+        <!--header sign in button-->
+        <button style="position: relative; right: -1090px;color: white;font-size: 20px;" id="myBtn" >Sign In</button>
+        <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="abcd">
+                        <form>
+                            <h2>Welcome Back!</h2>
+                            <br><br>
+                            <label class="labelText">Email :</label>
+                            <input type="text" id="email" placeholder="Enter Email" required>
+                            <br><br>
+                            <label id="password">Password :</label>
+                            <input type="password" id="password" placeholder="Enter Password" required>
+                            <br><br>
+                            <button class="two" type="submit">Sign In</button>
+                            <br><br>
+                            <!--hyperlinked sign in function-->
+                            <p1>Not a member?<a href="#" id="Btn1">Sign Up</a>
+                                <div id="Modal1" class="mod1">
+                                    <div class="modal-cont">
+                                        <span class="clos">&times;</span>
+                                        <div class="ab">
+                                            <form>
+                                                    <h2>Get Started</h2><br>
+                                                    <label class="labelText">First Name :</label> <!--this is used to indicate that the entered text is a label for this input field-->
+                                                    <input type="text" placeholder="Enter Full Name" id="firstName" required />
+                                                    <br><br><!--Used to input first last name-->
+                                                    <label class="labelText">Username :</label>
+                                                    <input type="text" placeholder="Enter Username" id="lastName" required />
+                                                    <br><br>
+                                                    <label id ="password">Password :</label> <!--id is a unique feature and any any changes to this id will apply only on this html statement-->
+                                                    <input type="password" placeholder="Enter Password" id="password" required /> <!-- used to input password-->
+                                                    <br><br>
+                                                    <label id ="password">Confirm Password :</label> <!--id is a unique feature and any any changes to this id will apply only on this html statement-->
+                                                    <input type="password" placeholder="Confirm Password" id="password" required /> <!-- used to input password-->
+                                                    <br><br>
+                                                    <button class="two" type="submit">Sign Up</button> <!--Button tag-->
+                                            </form>
+                                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                            </p1>
+                        </form>
+                        
+                    </div>
+                </div>
+            
+        </div>
+        <!--Sign in modal button-->
+        <button style="position: relative; right: -1100px;color: white;font-size: 20px;" id="Btn">Sign Up</button>
+        <div id="Modal" class="mod">
+            <div class="modal-con">
+                <span class="clo">&times;</span>
+                <div class="ab">
+                    <form>
+                            <h2>Get Started</h2><br>
+                            <label class="labelText">First Name :</label> <!--this is used to indicate that the entered text is a label for this input field-->
+                            <input type="text" placeholder="Enter Full Name" id="firstName" required />
+                            <br><br><!--Used to input first last name-->
+                            <label class="labelText">Username :</label>
+                            <input type="text" placeholder="Enter Username" id="username" required />
+                            <br><br>
+                            <label id ="password">Password :</label> <!--id is a unique feature and any any changes to this id will apply only on this html statement-->
+                            <input type="password" placeholder="Enter Password" id="password" required /> <!-- used to input password-->
+                            <br><br>
+                            <label id ="password">Confirm Password :</label> <!--id is a unique feature and any any changes to this id will apply only on this html statement-->
+                            <input type="password" placeholder="Confirm Password" id="password" required /> <!-- used to input password-->
+                            <br><br>
+                            <button class="two" type="submit">Sign Up</button> <!--Button tag-->
+                    </form>
+                            
+                </div>
+            </div>
+        </div>
+        <!--tagline under the logo-->
+        <p><b>Explore. Imagine. Create.</b></p>
+        <!--functionality for the edit/save button-->
+        <div onload="saveEdit()">
+            <div id="edit" contenteditable="false">
+                <h2 style="text-align: center;">The legacy of Jimi Hednrix</h2>
+                <h2 style="text-align: left;position: relative;right: -25px;">Jimi</h2>
+                <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;margin:2%;">Fixed positioning allows you to fix the position of an element to a particular spot on the page, regardless of scrolling. Specified coordinates will be relative to the browser window.
+                You can use two values top and left along with the position property to move an HTML element anywhere in the HTML document.An element with position: absolute is positioned at the specified coordinates relative to your screen top-left corner.You can use two values top and left along with the position property to move an HTML element anywhere in the HTML document.Fixed positioning allows you to fix the position of an element to a particular spot on the page, regardless of scrolling. Specified coordinates will be relative to the browser window</p>
+            </div>
+            <input style="position: relative; top: -220px; right: -1400px; width: 65px;text-align: center;background-color:deeppink;color: white;height: 30px;font-size: 20px;" type="button" id="save" value="Edit" onclick="saveEdits()" />
+            <div id="update"></div>
+            <p id="change" style="display: none;">1</p>
+        </div>
+        <!--like button-->
+        <button id="likes" style="background-color: deeppink;text-align: center;width: 80px;position: relative;top: 0px;right: -25px;color: white;">Like!</button>
+        <p id="display" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;position: relative;right: -25px;"><span id="display"></span>Be the first one to like this!</p><br><br>
+        <!--functionality for like button-->
+        <script type="text/javascript">
+            var count = 0;
+            var likes = document.getElementById("likes");
+            var display = document.getElementById("display");
+    
+            likes.onclick = function () {
+                document.getElementById("likes").innerHTML="Liked!";
+                count++;
+                display.innerHTML = count+ " person likes this!";
+            }
+        </script>
+
+
+        <!--comment button-->
+        <input style="height:100px ;width:500px;font-size:14pt;position: relative;right: -20px;" type="text" class="form-control" placeholder="Leave a comment..."  required="required" id="try">
+
+        <br>
+        <button style="position: relative;right: -20px;" id="pass" class="btn btn-danger">Comment!</button>
+        <br><br><br>
+        <p style="position: relative;right: -20px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">All Comments</p>
+        <h3 class="com" id="pg">      
+        </h3>
+        
+        <!--javascript files-->
+        <script src="post.js"></script>
+        <script src="header.js"></script>
+</body>
+</html>

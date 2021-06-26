@@ -1,0 +1,43 @@
+/* Header css files are stored are*/
+h1 {
+    color: blue;
+    display: inline;
+    font-size: 50px;
+    height: 40px;
+    padding: 5px;
+    margin: 0px 0px;
+    font-family:'Brush Script MT',cursive;
+}
+
+
+button{
+    background-color: blue;
+    color: white;
+    margin: 0px 2px;
+    display: inline;
+    text-align: right;
+    font-size: 20px;
+    margin: 5px;
+       
+}
+
+p{
+    font-family:'Brush Script MT',cursive;
+    font-size: 20px;
+    padding: 0px;
+    margin: 0px 0px;
+}
+
+button.two{
+    text-align: center;
+    background-color:dodgerblue ;
+    width: 200px;
+}
+div.ab{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+div.abcd{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

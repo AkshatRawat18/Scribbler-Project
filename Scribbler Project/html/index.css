@@ -1,0 +1,21 @@
+div.container{
+    height: 200px;
+    position: relative;
+    
+}
+div.center{
+    margin: 0;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+button.one{
+    background-color:goldenrod;
+    color: black;
+}
+button.three{
+    background-color: greenyellow;
+    text-align: center;
+}

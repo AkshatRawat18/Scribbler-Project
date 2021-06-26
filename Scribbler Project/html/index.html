@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--css files-->
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="header.css">
+        <style>
+            .modal,.mod,.mod1,.mo{
+                display: none; 
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px; 
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%; 
+                overflow: auto; 
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4); 
+            }
+            .modal-content,.modal-con,.modal-cont,.modal-c{
+                background-color: #fefefe;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+            }
+            .close,.clo,.clos,.cl{
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .close:hover,.close:focus,.clo:hover,.clo:focus,.clos:hover,.clos:focus,.cl:hover,.cl:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        </style>
+        
+        
+    </head>
+    <!--Background image for index page-->
+<body background="D:\FrontEnd with reactJs\Scribbler Project\images\background.jpg">
+        
+        <h1>ScriBBler</h1>
+        <button style="position: relative; right: -1090px;" id="myBtn">Sign In</button>
+        <!--Modal creation for sign in button-->
+        <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="abcd">
+                        <form>
+                            <h2>Welcome Back!</h2>
+                            <br><br>
+                            <label class="labelText">Email :</label>
+                            <input type="text" id="email" placeholder="Enter Email" required>
+                            <br><br>
+                            <label id="password">Password :</label>
+                            <input type="password" id="password" placeholder="Enter Password" required>
+                            <br><br>
+                            <button class="two" type="submit">Sign In</button>
+                            <br><br>
+                            <!--hyperlink redirection to the sign up modal from sign in modal-->
+                            <p1>Not a member?<a href="#" id="Btn1">Sign Up</a>
+                                <div id="Modal1" class="mod1">
+                                    <div class="modal-cont">
+                                        <span class="clos">&times;</span>
+                                        <div class="ab">
+                                            <form>
+                                                    <h2>Get Started</h2><br>
+                                                    <label class="labelText">First Name :</label> <!--this is used to indicate that the entered text is a label for this input field-->
+                                                    <input type="text" placeholder="Enter Full Name" id="firstName" required />
+                                                    <br><br><!--Used to input first last name-->
+                                                    <label class="labelText">Username :</label>
+                                                    <input type="text" placeholder="Enter Username" id="lastName" required />
+                                                    <br><br>
+                                                    <label id ="password">Password :</label> <!--id is a unique feature and any any changes to this id will apply only on this html statement-->
+                                                    <input type="password" placeholder="Enter Password" id="password" required /> <!-- used to input password-->
+                                                    <br><br>
+                                                    <label id ="password">Confirm Password :</label> <!--id is a unique feature and any any changes to this id will apply only on this html statement-->
+                                                    <input type="password" placeholder="Confirm Password" id="password" required /> <!-- used to input password-->
+                                                    <br><br>
+                                                    <button class="two" type="submit">Sign Up</button> <!--Button tag-->
+                                            </form>
+                                                    
+                                            </div>
+                                    </div>
+                                </div>
+                            
+                            </p1>
+                        </form>
+                        
+                    </div>
+                </div>
+            
+        </div>
+        <!--Sign in modal creation-->
+        <button style="position: relative; right: -1100px;" id="Btn">Sign Up</button>
+        <div id="Modal" class="mod">
+            <div class="modal-con">
+                <span class="clo">&times;</span>
+                <div class="ab">
+                    <form>
+                        <h2>Get Started</h2><br>
+                        <label class="labelText">First Name :</label> <!--this is used to indicate that the entered text is a label for this input field-->
+                        <input type="text" placeholder="Enter Full Name" id="firstName" required />
+                        <br><br><!--Used to input first last name-->
+                        <label class="labelText">Username :</label>
+                        <input type="text" placeholder="Enter Username" id="username" required />
+                        <br><br>
+                        <label id ="password">Password :</label> <!--id is a unique feature and any any changes to this id will apply only on this html statement-->
+                        <input type="password" placeholder="Enter Password" id="password" required /> <!-- used to input password-->
+                        <br><br>
+                        <label id ="password">Confirm Password :</label> <!--id is a unique feature and any any changes to this id will apply only on this html statement-->
+                        <input type="password" placeholder="Confirm Password" id="password" required /> <!-- used to input password-->
+                        <br><br>
+                        <button class="two" type="submit">Sign Up</button> <!--Button tag-->
+                    </form>
+                            
+                </div>
+            </div>
+        </div>
+        <!--tagline under the logo-->
+        <p><b>Explore. Imagine. Create.</b></p>
+        <!--center screen buttons-->
+        <div class="container">
+            <div class="center">
+                <!--all posts button gets redirected to bloglist.html using hyperlink-->
+                <a href="bloglist.html"><button class="one">All Posts</button></a>
+                <!--create post button opens a modal for creating a new blog-->
+                <button id="button2" class="one">Create Post</button>
+                <div id="modal2" class="mo">
+                    <div class="modal-c">
+                        <span class="cl">&times;</span>
+                        <div>
+                            <form>
+                                <h2>Pen Your Post</h2>
+                                <label class="labelText">Title:<br></label>
+                                <input type="text" id="title" required/>
+                                <br><br>
+                                <label class="labelText">Content:<br></label>
+                                <input type="text" id="content" style="height: 100px;" required/>
+                                <br><br>
+                                <button class="three" type="submit">Create</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
+        <!--Javascript files-->     
+        <script src="index.js"></script>
+        <script src="header.js"></script>
+</body>
+</html>
